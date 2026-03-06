@@ -1,0 +1,74 @@
+[
+  {
+    "course": "Artificial Intelligence",
+    "section": "AI Fundamentals",
+    "quiz_id": 57,
+    "question_count": 5
+  },
+  {
+    "course": "Artificial Intelligence",
+    "section": "Machine Learning",
+    "quiz_id": 58,
+    "question_count": 5
+  },
+  {
+    "course": "Artificial Intelligence",
+    "section": "ML Algorithms",
+    "quiz_id": 59,
+    "question_count": 5
+  },
+  {
+    "course": "Artificial Intelligence",
+    "section": "Deep Learning",
+    "quiz_id": 60,
+    "question_count": 5
+  },
+  {
+    "course": "Data Analytics",
+    "section": "Introduction",
+    "quiz_id": 49,
+    "question_count": 5
+  },
+  {
+    "course": "Data Analytics",
+    "section": "Python for Data Analytics",
+    "quiz_id": 50,
+    "question_count": 5
+  },
+  {
+    "course": "Data Analytics",
+    "section": "Pandas",
+    "quiz_id": 51,
+    "question_count": 5
+  },
+  {
+    "course": "Data Analytics",
+    "section": "Data Visualization",
+    "quiz_id": 52,
+    "question_count": 5
+  },
+  {
+    "course": "Java Programming",
+    "section": "Java Fundamentals",
+    "quiz_id": 53,
+    "question_count": 5
+  },
+  {
+    "course": "Java Programming",
+    "section": "Control Flow",
+    "quiz_id": 54,
+    "question_count": 5
+  },
+  {
+    "course": "Java Programming",
+    "section": "Object Oriented Programming",
+    "quiz_id": 55,
+    "question_count": 5
+  },
+  {
+    "course": "Java Programming",
+    "section": "Advanced Java",
+    "quiz_id": 56,
+    "question_count": 5
+  }
+]

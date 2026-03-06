@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0ea5e9;
+  /* Sky 500 (Light Blue) */
+  --color-primary-hover: #0284c7;
+  /* Sky 600 */
+  --color-bg-main: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+}
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: var(--color-text-main);
+  background: var(--color-bg-main);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Base Input Styles for Visibility */
+input,
+textarea {
+  @apply bg-white border border-slate-300 text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print\:block,
+  .print\:block * {
+    visibility: visible;
+  }
+
+  .print\:block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sky-500 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-sky-600 hover:shadow-lg hover:scale-105 active:scale-95 transition-all shadow-md shadow-sky-500/20 cursor-pointer;
+  }
+
+  .card {
+    @apply bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-sky-200 transition-all transform hover:-translate-y-1;
+  }
+}
