@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import apiClient from '@/lib/apiClient';
 import Sidebar from '@/components/Sidebar/SubjectSidebar';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Layout } from 'lucide-react';
 
 export default function SubjectLayout({ children }: { children: React.ReactNode }) {
     const { subjectId } = useParams();
@@ -60,7 +60,7 @@ export default function SubjectLayout({ children }: { children: React.ReactNode 
     return (
         <div className="flex h-[calc(100vh-8rem)] overflow-hidden gap-8">
             <aside className="w-80 flex-shrink-0 overflow-y-auto pr-4 border-r border-slate-200 dark:border-slate-800">
-                <Sidebar sections={data?.sections || []} subjectId={subjectId as string} />
+                <Sidebar />
             </aside>
             <main className="flex-grow overflow-y-auto">
                 {children}

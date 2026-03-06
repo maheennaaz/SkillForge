@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import apiClient from '@/lib/apiClient';
@@ -17,7 +17,7 @@ interface Subject {
     next_video_id?: number;
 }
 
-export default function HomePage() {
+function HomeContent() {
     const searchParams = useSearchParams();
     const query = searchParams.get('search')?.toLowerCase() || '';
     const { user, cart, addToCart: addToCartStore } = useAuthStore();
@@ -262,5 +262,17 @@ export default function HomePage() {
                 </div>
             </section>
         </div>
+    );
+}
+
+export default function HomePage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-[60vh] flex items-center justify-center">
+                <Loader2 className="w-12 h-12 animate-spin text-sky-600" />
+            </div>
+        }>
+            <HomeContent />
+        </Suspense>
     );
 }
